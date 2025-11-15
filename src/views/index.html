@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-M">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Despesas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Controle de Despesas</h1>
+    </header>
+
+    <main>
+
+        <section class="form-container">
+            <h2>Adicionar Nova Despesa</h2>
+            <form id="form-despesa">
+                <div class="form-grupo">
+                    <label for="descricao">Descrição</label>
+                    <input type="text" id="descricao" required>
+                </div>
+                <div class="form-grupo">
+                    <label for="valor">Valor (R$)</label>
+                    <input type="number" id="valor" step="0.01" min="0" required>
+                </div>
+                <div class="form-grupo">
+                    <label for="data">Data</label>
+                    <input type="date" id="data" required>
+                </div>
+                <button type="submit" class="btn-adicionar">Adicionar</button>
+            </form>
+        </section>
+
+        <section class="historico-container">
+            <h2>Histórico de Despesas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Data</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="lista-despesas">
+                </tbody>
+            </table>
+        </section>
+
+        <section class="resumo-container">
+            <h2>Total Gasto</h2>
+            <div id="total-despesas" class="total-valor">
+                R$ 0,00
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
